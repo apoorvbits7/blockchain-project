@@ -1,10 +1,6 @@
 import React from 'react';
 import './Deck.css';
-import DetailsCard from './DetailsCard/DetailsCard';
-import UploadCard from './UploadCard/UploadCard';
-import DownloadCard from './DownloadCard/DownloadCard';
 import Uploader from './Uploader/Uploader';
-import ProcessedTable from './ProcessedTable/ProcessedTable';
 import ProcessedViewer from './ProcessedViewer/ProcessedViewer';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
@@ -16,7 +12,6 @@ import QueryStudentDocuments from './Query/QueryStudentDocuments';
 import QueryCompanyRequests from './Query/QueryCompanyRequests';
 import QuerySharedFiles from './Query/QuerySharedFiles';
 import QuerySchool from './Query/QuerySchool';
-import Chatbot from './Chatbot/ChatbotTable';
 import InvoiceViewer from './Chatbot/InvoiceViewer/InvoiceViewer';
 import Student from './Student/Student';
 import TextField from '@material-ui/core/TextField';
@@ -99,10 +94,6 @@ class Deck extends React.Component {
                     </Route>
                     <Route path="/query">
                         <Query />
-                    </Route>
-                    <Route path="/chatbot">
-                        <Chatbot />
-                        {this.props.supportDisplay.display == true && <InvoiceViewer />}
                     </Route>
                 </Switch>
             </div>

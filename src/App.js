@@ -72,6 +72,7 @@ class App extends React.Component {
 
   changeAccount = (userAddress) => {
     this.props.setUserAddress(userAddress);
+    this.props.setOrg('');
     this.props.history.push('/');
   }
 
@@ -131,7 +132,13 @@ const mapDispatchToProps = (dispatch) => {
         type: "SET_APP_LOADING",
         state: state
       })
-    }
+    },
+    setOrg: (org) => {
+      dispatch({
+        type: "SET_ORGANIZATION",
+        org: org
+      })
+    },
   }
 }
 

@@ -28,7 +28,8 @@ const initState = {
     appLoading: true,
     filesUploaded: {},
     students: [],
-    studentFilesCount: 0
+    studentFilesCount: 0,
+    org: ''
 }
 
 var files;

@@ -10,6 +10,10 @@ class ProcessedViewer extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        window.open(`https://ipfs.io/ipfs/${this.props.preview.link}`, "_blank");
+    }
+
     render() {
         var blob = b64toBlob(base64.base64, "data:application");
         var blobUrl = URL.createObjectURL(blob);
